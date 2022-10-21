@@ -1,5 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
     --background_color: #444242;
     --highlight-orange: #FA9401;
     --iphone5s-background-color: #FFB64E;
+}
+
+html {
+    background-color: var(--background_color);
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem;
+}
+
+@media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    html {
+        background-color: var(--iphone5s-background-color);
+    }
+
+    .home-btn {
+        border: 1px solid white;
+    }
+
+    .home-btn:hover {
+        background-color: var(--highlight-orange);
+        border: 1px solid var(--background_color);
+        transition: 500ms;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* header style */
+
+header {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-idioma {
+    background-color: white;
+    width: 120px;
+    height: 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box-idioma p {
+    font-size: 14px;
+}
+
+/* main section style */
+
+main {
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main img {
+    margin-bottom: 2rem;
+    max-width: 80vw;
+}
+
+main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (orientation: landscape) {
+    main ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        display: none !important;
+    }
+}
+
+.home-btn {
+    margin: 5px;
+    border-radius: 50px;
+    width: clamp(150px, 75vw, 265px);
+    background-color: var(--background_color);
+    border: 1px solid var(--highlight-orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.home-btn:hover {
+    background-color: var(--highlight-orange);
+    transition: 500ms;
+}
+
+.home-btn img {
+    margin: 5px;
+}
+
+/* footer style */
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 3rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    margin: 10px 5px 1rem 5px;
 }
