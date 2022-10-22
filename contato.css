@@ -26,6 +26,9 @@ header {
     justify-content: space-between;
     position: relative;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    z-index: 1;
+    top: 0;
 }
 
 header div {
@@ -77,6 +80,13 @@ ul {
     margin-right: 1rem;
 }
 
+.contact-socials {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 /* footer style */
 
 footer {
@@ -93,4 +103,10 @@ footer {
 footer p {
     color: white;
     font-weight: 700;
+}
+
+@media (max-height: 400px) {
+    html {
+        min-height: calc(100vh + 10rem);
+    }
 }
