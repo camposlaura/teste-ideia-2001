@@ -47,12 +47,6 @@ main img {
     max-width: 80vw;
 }
 
-main ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 .home-btn {
     margin: 5px;
     border-radius: 50px;

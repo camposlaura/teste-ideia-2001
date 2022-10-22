@@ -1,7 +1,17 @@
 :root {
     --header-background-color: #444242;
+    --subheader-background-color: #F2F2F2;
     --highlight-orange: #FA9401;
+    --outline-color: #E8E8E8;
+    --text-color: #5B5A5A;
 }
+
+p {
+    color: var(--text-color);
+    font-size: .8rem;
+}
+
+/* header style */
 
 header {
     background-color: var(--header-background-color);
@@ -11,6 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 header div {
@@ -20,8 +31,44 @@ header div {
     justify-content: space-between;
 }
 
+/* main section style */
+
+main h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--highlight-orange);
+    background-color: var(--subheader-background-color);
+}
+
 .logo {
     width: min(40vw, 10rem);
     position: absolute;
     left: calc(50% - min(40vw, 10rem)/2);
+}
+
+ul {
+    padding: 0 1rem;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.contact-info::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: inline;
+    background-color: var(--outline-color);
+    position: absolute;
+    bottom: 0;
+}
+
+.contact-info img {
+    margin-right: 1rem;
 }
